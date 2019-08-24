@@ -71,10 +71,10 @@
                 www.cep.ufv.br <br>
             </div>
             <br>
-            <form action="arq.php">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eu <input type="text" style="min-width:500px;"><br><br>
-                Contato <input type="text" style="min-width:500px;">
-            </form>
+            <form action="tcleDao.php" method="POST">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eu <input name="nome" type="text" style="min-width:500px;"><br><br>
+                Contato <input name="contato"type="text" style="min-width:500px;">
+            
             <div class="textTCLE" id="divis">
                 fui informado(a) dos objetivos da pesquisa “Estereótipos de gênero e escolha ocupacional
                 na Universidade Federal de Viçosa” de maneira clara e detalhada, e esclareci minhas
@@ -83,20 +83,10 @@
                 via original deste termo de consentimento livre e esclarecido e me foi dada a oportunidade
                 de ler e esclarecer minhas dúvidas. <br><br>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                    First radio
-                </label>
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                    Second radio
-                </label>
-            </div>
         </div>
-        <button type="button" class="btn btn-success" id="btnContinuar">Continuar</button>
+        <button  type="submit" class="btn btn-success" id="btnContinuar" name="action">Aceito</button>
+        <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href = 'agra.php';">Não Aceito</button>
+        </form>
     </div>
     <script src="../js/bootstrap.js"></script>
 </body>
