@@ -43,10 +43,8 @@
                 ou modificação na forma em que você é atendido(a) pela pesquisadora.
                 Em qualquer momento, você poderá fazer perguntas sobre o estudo ou esclarecer dúvidas.
                 Você poderá entrar em contato com a pesquisadora Camila Alvarenga para esta finalidade
-                através do telefone (31)98518-3885. Este termo de consentimento encontra-se online
-                disponível para ser impresso em quantas vias forem necessárias. Uma via será arquivada
-                pela pesquisadora responsável, no Departamento de Economia Rural da Universidade
-                Federal de Viçosa e a outra será fornecida a você, quando desejar.
+                através do telefone (31) 98518-3885.
+
                 Os dados e instrumentos utilizados na pesquisa ficarão arquivados com a pesquisadora
                 responsável por um período de 5 (cinco) anos após o término da pesquisa, e depois desse
                 tempo serão destruídos. A pesquisadora tratará a sua identidade com padrões profissionais
@@ -70,13 +68,9 @@
                 Email: cep@ufv.br <br>
                 www.cep.ufv.br <br>
             </div>
-            <br>
-            <form action="tcleDao.php" method="POST">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eu <input name="nome" type="text" style="min-width:500px;"><br><br>
-                Contato <input name="contato"type="text" style="min-width:500px;">
-            
+           
             <div class="textTCLE" id="divis">
-                fui informado(a) dos objetivos da pesquisa “Estereótipos de gênero e escolha ocupacional
+                Eu fui informado(a) dos objetivos da pesquisa “Estereótipos de gênero e escolha ocupacional
                 na Universidade Federal de Viçosa” de maneira clara e detalhada, e esclareci minhas
                 dúvidas. Sei que a qualquer momento poderei solicitar novas informações e modificar minha
                 decisão de participar se assim o desejar. Declaro que concordo em participar. Recebi uma
@@ -84,9 +78,8 @@
                 de ler e esclarecer minhas dúvidas. <br><br>
             </div>
         </div>
-        <button  type="submit" class="btn btn-success" id="btnContinuar" name="action">Aceito</button>
+        <button  type="button" class="btn btn-success" id="btnContinuar" name="action" onclick="window.location.href='explicito.php';">Aceito</button>
         <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href = 'agra.php';">Não Aceito</button>
-        </form>
     </div>
     <script src="../js/bootstrap.js"></script>
 </body>

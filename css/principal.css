@@ -7,6 +7,7 @@
 .cabecalho{
     background-color: black;
     margin-right: -2px;
+    height: 110%;
 
 }
 
@@ -16,6 +17,7 @@
     color: white;
     text-align: center;
     padding: 15px;
+    
 }
 
 .container{
@@ -49,9 +51,10 @@
 
 #btnContinuar{
     display:inline-block;
-    margin-left: 83%;
+    float: right;
+    margin-left: 10px;
 }
 
 #btnCancelar{
-    position: relative;
+    float: right;
 }
