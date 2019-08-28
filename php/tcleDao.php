@@ -9,10 +9,6 @@
         $resultado = mysqli_query($conexao, $sql);
 
         if($resultado){
-
-            session_start();
-            $_SESSION['tcle'] = mysqli_insert_id($conexao);
-
             header("location:explicito.php");
         }
     }

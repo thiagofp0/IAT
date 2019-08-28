@@ -1,9 +1,5 @@
 <?php
     include_once("conexao.php");
-
-    session_start();
-
-    $tcle = $_SESSION['tcle'];
 ?>
 
 <!DOCTYPE html>
@@ -68,14 +64,14 @@
                 <div class="textQuestion">
                     3. Em qual período você está? 
                     <div class="textQuestionAns">
-                        <input class="form-control" type="number" name="periodo" min="1" step="1" style="max-width:7%; text-align:right; font-family:arial !important;"/>
+                        <input class="form-control" type="number" name="periodo" min="1" step="1" style="max-width:7%; text-align:right; font-family:arial !important;" required>
                     </div>
                 </div>
 
                 <div class="textQuestion">
-                    4. Idade: 
+                    4. Data de Nascimento: 
                     <div class="textQuestionAns">
-                        <input class="form-control" type="number" name="idade" min="0" step="1" style="max-width:7%; text-align:right; font-family:arial !important;"/>
+                        <input class="form-control" type="date" name="idade" style="max-width:17%; font-family:arial !important;" required/>
                     </div>
                 </div>
 

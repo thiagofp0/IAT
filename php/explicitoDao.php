@@ -3,10 +3,9 @@
 
     session_start();
 
-    $tcle = $_SESSION['tcle'];
     $sexo = $_POST['sexo'];
     $curso = $_POST['curso'];
-    $idade = $_POST['idade'];
+    $dataNasc = $date_format($_POST['dataNasc'], 'Y-m-d');
     $cor = $_POST['cor'];
     $q6= $_POST['q6'];
     $q7 = $_POST['q7'];
@@ -24,7 +23,7 @@
     $genero = $_POST['genero'];
 
     if($conexao){
-        $sql = "INSERT INTO explicito(tcle, sexo, curso, dataNasc, cor, q6, q7, q8, q9, q10a, q10b, q10c, q10d, q10e, q10f, q11a, q11b, q11c, genero) VALUES ($tcle, $sexo, $curso, '01-01-2001', '$cor', '$q6', '$q7', '$q8', '$q9', '$q10a', '$q10b', '$q10c', '$q10d', '$q10e', '$q10f', '$q11a', '$q11b', '$q11c', '$genero');";
+        $sql = "INSERT INTO explicito(sexo, curso, dataNasc, cor, q6, q7, q8, q9, q10a, q10b, q10c, q10d, q10e, q10f, q11a, q11b, q11c, genero) VALUES ($sexo, $curso, $dataNasc, '$cor', '$q6', '$q7', '$q8', '$q9', '$q10a', '$q10b', '$q10c', '$q10d', '$q10e', '$q10f', '$q11a', '$q11b', '$q11c', '$genero');";
         $resultado = mysqli_query($conexao, $sql);
 
         if($resultado){
