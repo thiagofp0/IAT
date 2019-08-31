@@ -1,0 +1,261 @@
+@font-face {
+    font-family: Exo;
+    src: url('../font/Exo-Regular.ttf');
+}
+
+@font-face {
+    font-family: Exo;
+    src: url('../font/Exo-Bold.ttf');
+    font-weight: bold;
+}
+
+html,
+body {
+    font-family: Exo;
+    margin: 0 !important;
+    padding: 0;
+}
+
+table {
+    font-family: Exo;
+    margin-top: 30px !important;
+}
+
+
+th {
+    font-size: 20px;
+}
+
+td {
+    font-size: 15px;
+}
+
+
+header {
+    /* Propriedades de tamanho e posicionamento */
+    position: fixed;
+    left: -56;
+    top: -110;
+    width: 100%;
+    min-height: 100%;
+    height: 10%;
+    /* Propriedades do plano de fundo */
+    background-repeat: no-repeat;
+    /* Propriedades do texto */
+    color: white;
+    text-align: center;
+}
+
+
+/* Componente do cabeçalho que exibe a imagem de fundo */
+header>.background {
+    width: 100%;
+    border-bottom: white 10px solid;
+}
+
+footer {
+    /* Propriedades de tamanho e posicionamento */
+    position: fixed;
+    left: -56;
+    bottom: -100;
+    width: 100% !important;
+    min-height: 100%;
+    height: 150px;
+    /* Propriedades do plano de fundo */
+    background-color: white;
+    /* Propriedades do texto */
+    color: black;
+    align-content: center;
+}
+
+.footer-logo {
+    margin-top: 50px !important;
+    text-align: center;
+}
+
+.footer-content>.background {
+    width: 100% !important;
+    margin-bottom: 60px;
+}
+
+.page {
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+.page, .capa {
+    margin: 0cm 2cm 3cm 2cm;
+    text-align: center;
+}
+
+.capa {
+    padding-top: 200px;
+}
+
+.capa > .content > .title {
+    font-size: 30pt;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.capa > .content > .subtitle { 
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.capa > .content > p {
+    font-size: 14pt !important;
+    text-indent: 60px;
+    text-align: justify;
+}
+
+.title {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-top:250px;
+    font-weight:bolder;
+}
+
+p.paragraph {
+    text-align: justify;
+    text-indent: 60px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+li.paragraph{
+    margin-bottom: 40px;
+}
+
+.paragraph>.title {
+    margin-bottom: 10px;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.paragraph>.content {
+    font-size: 25px;
+    text-align: justify;
+}
+
+.list {
+    max-width: 100% !important;
+    font-size: 18pt !important;
+    text-align: left justify;
+}
+
+.list>.item {
+    margin-bottom: 80px;
+}
+
+p.list-title {
+    font-size: 18pt !important;
+    text-align: left;
+    margin-bottom: 60px;
+    padding-top: 25px;
+}
+
+hr.investimento{
+    border-top: 1px solid LightGray;
+}
+
+.bordered {
+    border: 1px solid LightGray;
+}
+
+.slide1{
+    margin: 0 !important;
+    background-image: url("../img/locus-capa-slide-1.png");
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.slide2{
+    margin: 0 !important;
+    background-image: url("../img/locus-capa-slide-2.png");
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.slide3{
+    margin: 0 !important;
+    background-image: url("../img/locus-capa-slide-3.png");
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.slide4{
+    margin: 0 !important;
+    background-image: url("../img/locus-capa-slide-4.png");
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.slide5{
+    margin: 0 !important;
+    background-image: url("../img/locus-capa-slide-5.png");
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.quote{
+    font-size: 50px;
+    color: #f8c901;
+    margin-top: 350px;
+}
+
+.list{
+    margin-left: 80px;
+}
+
+.list h1{
+    font-size: 40px !important;
+}
+
+.imgDiv{
+    position: fixed;
+    top: 30%;
+    right: -10%;
+}
+
+.imgDiv img{
+    max-width: 300;
+}
+
+.tabela{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    width: 900px;
+}
+
+.tabela th{
+    background-color: #f5c728;
+}
+
+.footnote{
+    margin-left:80px !important;
+    position: relative;
+    top: 9px;
+}
+/*@media screen {
+  div.divFooter {
+    display: none;
+  }
+}
+
+@media print {
+  div.divFooter {
+    position: fixed;
+    bottom: 0;
+  }
+}*/
