@@ -1,8 +1,6 @@
 <?php
     include_once("conexao.php");
 
-    session_start();
-
     $sexo = $_POST['sexo'];
     $curso = $_POST['curso'];
     $idade = $_POST['idade'];
@@ -26,8 +24,11 @@
         $sql = "INSERT INTO explicito(sexo, curso, idade, cor, q6, q7, q8, q9, q10a, q10b, q10c, q10d, q10e, q10f, q11a, q11b, q11c, genero) VALUES ($sexo, $curso, $idade, '$cor', '$q6', '$q7', '$q8', '$q9', '$q10a', '$q10b', '$q10c', '$q10d', '$q10e', '$q10f', '$q11a', '$q11b', '$q11c', '$genero');";
         $resultado = mysqli_query($conexao, $sql);
 
-        /*if($resultado){
-            echo "deu certo :)";
-        } */
+        if($resultado){
+            header("location:implicito.php");
+        }
+        else{
+            echo "erro";
+        }
     }
 ?>
