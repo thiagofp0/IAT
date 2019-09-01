@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Ago-2019 às 00:32
+-- Generation Time: 01-Set-2019 às 02:48
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -193,10 +193,10 @@ INSERT INTO `curso` (`id`, `nome`, `modalidade`) VALUES
 --
 
 CREATE TABLE `explicito` (
-  `tcle` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `sexo` int(11) NOT NULL,
   `curso` int(11) NOT NULL,
-  `dataNasc` date NOT NULL,
+  `idade` int(11) NOT NULL,
   `cor` varchar(30) NOT NULL,
   `q6` varchar(100) NOT NULL,
   `q7` varchar(100) NOT NULL,
@@ -214,17 +214,61 @@ CREATE TABLE `explicito` (
   `genero` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `explicito`
+--
+
+INSERT INTO `explicito` (`id`, `sexo`, `curso`, `idade`, `cor`, `q6`, `q7`, `q8`, `q9`, `q10a`, `q10b`, `q10c`, `q10d`, `q10e`, `q10f`, `q11a`, `q11b`, `q11c`, `genero`) VALUES
+(1, 1, 17, 0, 'Branca', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(2, 0, 2, 11, 'Parda', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tcle`
+-- Estrutura da tabela `palavras`
 --
 
-CREATE TABLE `tcle` (
+CREATE TABLE `palavras` (
   `id` int(11) NOT NULL,
-  `nome` varchar(200) NOT NULL,
-  `contato` varchar(200) NOT NULL
+  `nome` varchar(50) NOT NULL,
+  `categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `palavras`
+--
+
+INSERT INTO `palavras` (`id`, `nome`, `categoria`) VALUES
+(1, 'avô', 1),
+(2, 'esposa', 2),
+(3, 'fêmea', 2),
+(4, 'filha', 2),
+(5, 'filho', 1),
+(6, 'homem', 1),
+(7, 'mãe', 2),
+(8, 'marido', 1),
+(9, 'masculino', 1),
+(10, 'menina', 2),
+(11, 'menino', 1),
+(12, 'mulher', 2),
+(13, 'pai', 1),
+(14, 'tia', 2),
+(15, 'tio', 1),
+(16, 'avó', 2),
+(17, 'astronomia', 3),
+(18, 'matemática', 3),
+(19, 'química', 3),
+(20, 'física', 3),
+(21, 'biologia', 3),
+(22, 'geologia', 3),
+(23, 'engenharia', 3),
+(24, 'história', 4),
+(25, 'artes', 4),
+(26, 'humanidades', 4),
+(27, 'inglês', 4),
+(28, 'filosofia', 4),
+(29, 'música', 4),
+(30, 'literatura', 4);
 
 --
 -- Indexes for dumped tables
@@ -240,13 +284,13 @@ ALTER TABLE `curso`
 -- Indexes for table `explicito`
 --
 ALTER TABLE `explicito`
-  ADD PRIMARY KEY (`tcle`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `fk_curso` (`curso`);
 
 --
--- Indexes for table `tcle`
+-- Indexes for table `palavras`
 --
-ALTER TABLE `tcle`
+ALTER TABLE `palavras`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -260,10 +304,16 @@ ALTER TABLE `curso`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
--- AUTO_INCREMENT for table `tcle`
+-- AUTO_INCREMENT for table `explicito`
 --
-ALTER TABLE `tcle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `explicito`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `palavras`
+--
+ALTER TABLE `palavras`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
@@ -273,8 +323,7 @@ ALTER TABLE `tcle`
 -- Limitadores para a tabela `explicito`
 --
 ALTER TABLE `explicito`
-  ADD CONSTRAINT `fk_curso` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`),
-  ADD CONSTRAINT `fk_tcle` FOREIGN KEY (`tcle`) REFERENCES `tcle` (`id`);
+  ADD CONSTRAINT `fk_curso` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -69,9 +69,9 @@
                 </div>
 
                 <div class="textQuestion">
-                    4. Data de Nascimento: 
+                    4. Idade: 
                     <div class="textQuestionAns">
-                        <input class="form-control" type="date" name="idade" style="max-width:17%; font-family:arial !important;" required/>
+                        <input class="form-control" type="number" name="idade" min="1" style="max-width:7%; font-family:arial !important;" required/>
                     </div>
                 </div>
 
