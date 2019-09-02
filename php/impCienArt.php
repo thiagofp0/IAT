@@ -100,11 +100,11 @@
     <div class="box container" id="boxQuest">
         <div class="grupos">
             <div class="grupo1">
-                <h6>Aperte seta para esquerda</h6>
+                <h6>Aperte seta para esquerda</h6><br>
                 <h1>Ciência</h1>
             </div>
             <div class="grupo2">
-                <h6>Aperte seta para direita</h6>
+                <h6>Aperte seta para direita</h6><br>
                 <h1>Artes</h1>
             </div>
         </div>

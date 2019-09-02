@@ -20,7 +20,6 @@
 .grupo1{
     width: 40%;
     float: left;
-    display: inline-block;
 }
 
 .grupo2{
@@ -29,22 +28,18 @@
 }
 
 .grupo1 h1{
-    float: left;
     margin-left: 0%;
 }
 
 .grupo1 h6{
-    float: left;
     margin-left: 0;
 }
 
-.grupo2 h1{
-    float: right;
+.grupo2 h1{;
     margin-right: 5%;
 }
 
-.grupo2 h6{
-    float: right;
+.grupo2 h6{;
     margin-right: 0;
 }
 
