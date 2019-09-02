@@ -25,7 +25,7 @@
         $resultado = mysqli_query($conexao, $sql);
 
         if($resultado){
-            header("location:implicito.php");
+            header("location:impCienArt.php");
         }
         else{
             echo "erro";

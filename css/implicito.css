@@ -1,0 +1,62 @@
+#boxQuest{
+    margin-top: 2.5%;
+    width: 50%;
+    position: relative;
+    padding: 2%;
+    height: 80%;
+}
+
+.inboxText{
+    position: relative;
+    margin-top: -7%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+
+    
+}
+.grupos{
+    height: 20%;
+}
+.grupo1{
+    width: 40%;
+    float: left;
+    display: inline-block;
+}
+
+.grupo2{
+    width: 40%;
+    float: right;
+}
+
+.grupo1 h1{
+    float: left;
+    margin-left: 0%;
+}
+
+.grupo1 h6{
+    float: left;
+    margin-left: 0;
+}
+
+.grupo2 h1{
+    float: right;
+    margin-right: 5%;
+}
+
+.grupo2 h6{
+    float: right;
+    margin-right: 0;
+}
+
+.tecla{
+    background-color:rgb(31, 31, 31);
+    border-radius: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
