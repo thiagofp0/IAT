@@ -78,8 +78,10 @@
                 de ler e esclarecer minhas dúvidas. <br><br>
             </div>
         </div>
-        <button  type="button" class="btn btn-success" id="btnContinuar" name="action" onclick="window.location.href='explicito.php';">Aceito</button>
-        <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href = 'agra.php';">Não Aceito</button>
+        <div class="divBtn">
+            <button  type="button" class="btn btn-success" id="btnContinuar" name="action" onclick="window.location.href='explicito.php';">Aceito</button>
+            <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href = 'agra.php';">Não Aceito</button>
+        </div>
     </div>
     <script src="../js/bootstrap.js"></script>
 </body>
