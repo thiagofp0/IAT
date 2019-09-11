@@ -41,13 +41,23 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.color = 'black';
-                document.getElementById("palavra").innerHTML = "fim";
+                document.getElementById("palavra").style.fontSize = '60px';
+                document.getElementById("palavra").innerHTML = "Fim";
             }
             else{
                 document.getElementById("palavra").style.color = 'black';
+                document.getElementById("palavra").style.fontSize = '60px';
                 document.getElementById("palavra").innerHTML = palavras[indice].nome;
             }
+            if(palavras[indice].categoria == 3){
+                document.getElementById("palavra").style.color = 'blue'; 
+            }
+            if(palavras[indice].categoria == 4){
+                document.getElementById("palavra").style.color = 'green';
+            }
         }
+
+        //Tá errado o negócio da cor
 
         //Parte de captura das teclas
         document.onkeyup = function (event) {
@@ -101,11 +111,11 @@
         <div class="grupos">
             <div class="grupo1">
                 <h6>Aperte seta para esquerda</h6><br>
-                <h1>Ciência</h1>
+                <h1>Exatas</h1>
             </div>
             <div class="grupo2">
                 <h6>Aperte seta para direita</h6><br>
-                <h1>Artes</h1>
+                <h1>Humanas</h1>
             </div>
         </div>
         <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">

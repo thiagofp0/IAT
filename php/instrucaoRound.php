@@ -1,3 +1,30 @@
+<?php
+    include_once("conexao.php");
+
+    $resultadoCategoria1 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 1");
+    //$palavrasCattegoria3 = array();
+    $row = mysqli_num_rows($resultadoCategoria1);
+
+    $resultadoCategoria2 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 2");
+    //$palavrasCattegoria3 = array();
+    $row = mysqli_num_rows($resultadoCategoria2);
+    //Pega as palavras do BD
+    $resultadoCategoria3 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 3");
+    //$palavrasCattegoria3 = array();
+    $row = mysqli_num_rows($resultadoCategoria3);
+
+    $resultadoCategoria4 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 4");
+    //$palavrasCattegoria4 = array();
+    $row2 = mysqli_num_rows($resultadoCategoria4);
+
+    /* //Passa o resultado para o vetor
+    while($row = $resultadoCategoria3->fetch_array()){
+        $palavrasCategoria3[] = $row;
+    } */
+
+    //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
+    //shuffle($palavras);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,24 +55,40 @@
                 <tbody>
                     <tr>
                     <th scope="row">Masculino</th>
-                    <td>Homem, Filho, Menino, Tio, Marido, Ele, Dele</td>
+                    <td><? 
+                        foreach($resultadoCategoria1 as $linha){
+                            echo $linha['nome']. "; ";
+                        }
+                    ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Feminino</th>
-                    <td>Mulher, Filha, Menina, Tia, Esposa, Ela, Dela</td>
+                    <td><? 
+                        foreach($resultadoCategoria2 as $linha){
+                            echo $linha['nome']. "; ";
+                        }
+                    ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Exatas</th>
-                    <td>Matemática, Engenharia, Física, Astronomia, Química, Geologia, Estatística</td>
+                    <td><? 
+                        foreach($resultadoCategoria3 as $linha){
+                            echo $linha['nome']. "; ";
+                        }
+                    ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Humanas</th>
-                    <td>Português, Literatura, Filosofia, História, Sociologia, Pedagogia, Jornalismo</td>
+                    <td><? 
+                        foreach($resultadoCategoria4 as $linha){
+                            echo $linha['nome']. "; ";
+                        }
+                    ?></td>
                     </tr>
                 </tbody>
             </table>
             <p>São sete partes. As instruções mudam para cada parte. <strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impCienArt.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaHum.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

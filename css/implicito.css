@@ -3,16 +3,15 @@
     width: 50%;
     position: relative;
     padding: 2%;
-    height: 80%;
+    height: 90%;
+    margin-bottom: 2.5%;
 }
 
 .inboxText{
     position: relative;
-    margin-top: -7%;
+    margin-top: 7%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 26px;
-
-    
+    font-size: 26px;    
 }
 .grupos{
     height: 20%;
@@ -54,4 +53,3 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-
