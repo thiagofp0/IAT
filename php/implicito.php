@@ -18,6 +18,8 @@
 <head>
     <script type="text/javascript">
         
+        window.alert("aaa");
+
         var indice = -1;
         var palavras = JSON.parse('<?=$palavrasJSON?>')
         console.log(palavras);

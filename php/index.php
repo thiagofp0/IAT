@@ -9,6 +9,33 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
+    <!--<script>
+        var ok = false;
+
+        function checaReloadOuMudanca(){
+            if(window.sessionStorage.getItem("saiu") === "true"){
+                window.sessionStorage.setItem("saiu", "false");
+                window.location.replace('explicito.php');
+            }
+        };
+
+        function mudaPagina(i){
+            ok = true; 
+            window.sessionStorage.setItem("saiu", "false"); 
+            if(i == 1)
+                window.location.href='explicito.php';
+            else if(i == 2)
+                window.location.href='agra.php';
+        }
+
+        window.addEventListener("beforeunload", function (e) {
+            if(ok)
+                return null;
+            window.sessionStorage.setItem("saiu", "true");
+            (e || window.event).returnValue = null;
+            return null;
+        });
+    </script>-->
 </head>
 <body class="bg">
     <section class="cabecalho">
@@ -80,7 +107,7 @@
         </div>
         <div class="divBtn">
             <button  type="button" class="btn btn-success" id="btnContinuar" name="action" onclick="window.location.href='explicito.php';">Aceito</button>
-            <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href = 'agra.php';">Não Aceito</button>
+            <button type="button" class="btn btn-secondary" id="btnCancelar" onclick="window.location.href='agra.php';">Não Aceito</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

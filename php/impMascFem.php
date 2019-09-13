@@ -2,7 +2,7 @@
     include_once("conexao.php");
 
     //Pega as palavras do BD
-    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 3 or categoria = 4");
+    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 1 or categoria = 2");
     $palavras = array();
 
     //Passa o resultado para o vetor
@@ -41,7 +41,7 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.location.replace("impMascFem.php");
+                window.location.replace("impExaMascHumFem.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';
@@ -75,7 +75,7 @@
             }
             //Seta esquerda
             else if(key == 37){
-                if(palavras[indice].categoria == 3){
+                if(palavras[indice].categoria == 1){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
@@ -87,7 +87,7 @@
             }
             //Seta direita
             else if(key == 39){
-                if(palavras[indice].categoria == 4){
+                if(palavras[indice].categoria == 2){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
@@ -109,16 +109,16 @@
         <div class="grupos">
             <div class="grupo1">
                 <h6>Aperte seta para esquerda</h6><br>
-                <h1>Exatas</h1>
+                <h1>Masculino</h1>
             </div>
             <div class="grupo2">
                 <h6>Aperte seta para direita</h6><br>
-                <h1>Humanas</h1>
+                <h1>Feminino</h1>
             </div>
         </div>
         <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">
-        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Ciência</strong>.</p>
-        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Artes</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Masculino</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Feminino</strong>.</p>
         <p>Aparecerá apenas um item por vez!</p>
         <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
         <p> <u> Vá o mais rápido possível </u> enquanto é preciso</p>
