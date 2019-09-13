@@ -6,13 +6,16 @@
     height: 80%;
 }
 
+div{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
 .inboxText{
     position: relative;
     margin-top: -7%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 26px;
-
-    
+    text-transform: uppercase;
 }
 .grupos{
     height: 20%;
