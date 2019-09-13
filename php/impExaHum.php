@@ -41,13 +41,23 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.color = 'black';
-                document.getElementById("palavra").innerHTML = "fim";
+                document.getElementById("palavra").style.fontSize = '60px';
+                document.getElementById("palavra").innerHTML = "Fim";
             }
             else{
                 document.getElementById("palavra").style.color = 'black';
+                document.getElementById("palavra").style.fontSize = '60px';
                 document.getElementById("palavra").innerHTML = palavras[indice].nome;
             }
+            if(palavras[indice].categoria == 3){
+                document.getElementById("palavra").style.color = 'blue'; 
+            }
+            if(palavras[indice].categoria == 4){
+                document.getElementById("palavra").style.color = 'green';
+            }
         }
+
+        //Tá errado o negócio da cor
 
         //Parte de captura das teclas
         document.onkeyup = function (event) {
@@ -101,14 +111,20 @@
         <div class="grupos">
             <div class="grupo1">
                 <h6>Aperte seta para esquerda</h6><br>
-                <h1>Ciência</h1>
+                <h1>Exatas</h1>
             </div>
             <div class="grupo2">
                 <h6>Aperte seta para direita</h6><br>
-                <h1>Artes</h1>
+                <h1>Humanas</h1>
             </div>
         </div>
-        <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">Aperte <span class="tecla">ENTER</span> quando estiver pronto para começar</div>
+        <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">
+        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Ciência</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Artes</strong>.</p>
+        <p>Aparecerá apenas um item por vez!</p>
+        <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
+        <p> <u> Vá o mais rápido possível </u> enquanto é preciso</p>
+        Aperte <span class="tecla">ENTER</span> quando estiver pronto para começar</div>
     </div>
 </body>
 </html>
