@@ -41,7 +41,7 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.location.replace("impMascFem.php");
+                window.location.replace("instrucaoRound2.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';

@@ -44,7 +44,7 @@
     </section>
     <div class="container">
         <div class="alert alert-secondary">
-            <h1 class="tituloEtapa">Etapa 1</h1> <br>
+            <h1 class="tituloEtapa">Etapa 4</h1> <br>
             <p>Neste teste você usará as teclas "seta para a esquerda" e "seta para a direita" para categorizar itens em grupos o mais rápido quanto conseguir.</p>
             <p>Abaixo estão os itens e os grupos aos quais eles pertencem:  </p>
             <table class="table">
@@ -90,7 +90,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaHum.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaFemHumMasc.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
