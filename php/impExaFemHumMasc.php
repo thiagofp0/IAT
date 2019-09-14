@@ -32,7 +32,7 @@
         
         
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "6")
+        if(window.sessionStorage.getItem("page") != "9")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
 
@@ -49,7 +49,7 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '7');
+                window.sessionStorage.setItem('page', '10');
                 window.location.replace("calculo.php");
             }
             else{

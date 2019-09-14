@@ -37,6 +37,11 @@
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
     <link rel="stylesheet" href=" ../css/implicito.css">
+    <script>
+        if(window.sessionStorage.getItem("page") != "6")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem('page', '999');
+    </script>
 </head>
 <body class="bg">
     <section class="cabecalho">
@@ -90,7 +95,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaMascHumFem.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page', '7'); window.location.href = 'impExaMascHumFem.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
