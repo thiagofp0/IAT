@@ -13,10 +13,6 @@
     //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
     shuffle($palavras);
 
-    while(sizeof($palavras) < 20){
-        $palavras[] = $palavras[rand(0, sizeof($palavras) - 1)];
-    }
-
     $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>
 <!DOCTYPE html>
@@ -48,6 +44,7 @@
         var quantpalavras = palavras.length;
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
+        var erros = 0; //Erros cometidos nessa seção
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -55,6 +52,8 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '8');
+                window.sessionStorage.setItem('temposCompativel', JSON.stringify(tempos));
+                window.sessionStorage.setItem('errosCompativel', erros);
                 window.location.replace("instrucaoRound4.php");
             }
             else{
@@ -93,10 +92,12 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
             //Seta direita
@@ -105,10 +106,12 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
         }

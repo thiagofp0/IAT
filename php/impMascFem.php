@@ -10,13 +10,14 @@
         $palavras[] = $row;
     }
 
-    //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
-    shuffle($palavras);
 
-
+    /*Completa até dar 20*/
     while(sizeof($palavras) < 20){
         $palavras[] = $palavras[rand(0, sizeof($palavras) - 1)];
     }
+
+    //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
+    shuffle($palavras);
 
     $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>

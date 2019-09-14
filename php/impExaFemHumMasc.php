@@ -43,6 +43,7 @@
         var quantpalavras = palavras.length;
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
+        var erros = 0; //Erros cometidos nessa seção
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -50,6 +51,8 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '10');
+                window.sessionStorage.setItem('temposIncompativel', JSON.stringify(tempos));
+                window.sessionStorage.setItem('errosIncompativel', erros);
                 window.location.replace("calculo.php");
             }
             else{
@@ -88,10 +91,12 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
             //Seta direita
@@ -100,10 +105,12 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
         }
