@@ -31,9 +31,9 @@
     <script type="text/javascript">
 
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "3")
-            window.location.replace("index.php");
-        window.sessionStorage.setItem('page', '999');
+        // if(window.sessionStorage.getItem("page") != "3")
+        //     window.location.replace("index.php");
+        // window.sessionStorage.setItem('page', '999');
 
         /*Controle das setas e de tempo*/
         

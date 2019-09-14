@@ -90,7 +90,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaMascHumFem.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impMascFem.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

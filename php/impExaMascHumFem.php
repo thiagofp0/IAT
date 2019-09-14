@@ -32,9 +32,9 @@
         
         
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "5")
-            window.location.replace("index.php");
-        window.sessionStorage.setItem('page', '999');
+        // if(window.sessionStorage.getItem("page") != "5")
+        //     window.location.replace("index.php");
+        // window.sessionStorage.setItem('page', '999');
 
         /*Controle das setas e de tempo*/
         
@@ -50,7 +50,7 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '6');
-                window.location.replace("impExaFemcHumMasc.php");
+                window.location.replace("instrucaoRound4.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';

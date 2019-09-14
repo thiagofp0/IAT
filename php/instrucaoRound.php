@@ -37,11 +37,11 @@
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
     <link rel="stylesheet" href=" ../css/implicito.css">
-    <script>
+    <!-- <script>
         if(window.sessionStorage.getItem("page") != "2")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
-    </script>
+    </script> -->
 </head>
 <body class="bg">
     <section class="cabecalho">
