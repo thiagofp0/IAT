@@ -36,15 +36,12 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href=" ../css/implicito.css">
-=======
     <script>
         if(window.sessionStorage.getItem("page") != "2")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
     </script>
->>>>>>> 974b3771ef4f62f4064fd5c6d942a948674b0dc3
 </head>
 <body class="bg">
     <section class="cabecalho">
