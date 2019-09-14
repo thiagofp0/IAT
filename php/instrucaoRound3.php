@@ -1,21 +1,29 @@
 <?php
-    include_once("conexao.php");
+    require('conexao.php');
+	require_once('conexao.php');
+	include('conexao');
+	include_once("conexao.php");
+		
+	if($conexao){
+      		
+    	  $resultadoCategoria1 = mysqli_query($conexao, 'SELECT nome FROM palavras WHERE categoria = 1');
+          //$palavrasCattegoria3 = array();
+          $row = mysqli_num_rows($resultadoCategoria1);
 
-    $resultadoCategoria1 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 1");
-    //$palavrasCattegoria3 = array();
-    $row = mysqli_num_rows($resultadoCategoria1);
+          $resultadoCategoria2 = mysqli_query($conexao, "SELECT nome FROM palavras WHERE categoria = 2");
+          //$palavrasCattegoria3 = array();
+          $row2 = mysqli_num_rows($resultadoCategoria2);
+          //Pega as palavras do BD
+          $resultadoCategoria3 = mysqli_query($conexao, "SELECT nome FROM palavras WHERE categoria = 3");
+          //$palavrasCattegoria3 = array();
+          $row3 = mysqli_num_rows($resultadoCategoria3);
 
-    $resultadoCategoria2 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 2");
-    //$palavrasCattegoria3 = array();
-    $row = mysqli_num_rows($resultadoCategoria2);
-    //Pega as palavras do BD
-    $resultadoCategoria3 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 3");
-    //$palavrasCattegoria3 = array();
-    $row = mysqli_num_rows($resultadoCategoria3);
-
-    $resultadoCategoria4 = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 4");
-    //$palavrasCattegoria4 = array();
-    $row2 = mysqli_num_rows($resultadoCategoria4);
+          $resultadoCategoria4 = mysqli_query($conexao, "SELECT nome FROM palavras WHERE categoria = 4");
+          //$palavrasCattegoria4 = array();
+          $row4 = mysqli_num_rows($resultadoCategoria4);
+    }else{
+      echo "Sem conexão!";
+    }
 
     /* //Passa o resultado para o vetor
     while($row = $resultadoCategoria3->fetch_array()){
@@ -37,6 +45,11 @@
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
     <link rel="stylesheet" href=" ../css/implicito.css">
+    <script>
+        if(window.sessionStorage.getItem("page") != "6")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem('page', '999');
+    </script>
 </head>
 <body class="bg">
     <section class="cabecalho">
@@ -57,40 +70,40 @@
                 <tbody>
                     <tr>
                     <th scope="row">Masculino</th>
-                    <td><? 
-                        foreach($resultadoCategoria1 as $linha){
-                            echo $linha['nome']. "; ";
+                    <td><?php
+                      		foreach($resultadoCategoria1 as $linha){
+                           echo $linha['nome'] . "; ";
                         }
-                    ?></td>
+                      ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Feminino</th>
-                    <td><? 
-                        foreach($resultadoCategoria2 as $linha){
-                            echo $linha['nome']. "; ";
+                    <td><?php
+                      		foreach($resultadoCategoria2 as $linha){
+                           echo $linha['nome'] . "; ";
                         }
-                    ?></td>
+                      ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Exatas</th>
-                    <td><? 
-                        foreach($resultadoCategoria3 as $linha){
-                            echo $linha['nome']. "; ";
+                    <td><?php
+                      		foreach($resultadoCategoria3 as $linha){
+                           echo $linha['nome'] . "; ";
                         }
-                    ?></td>
+                      ?></td>
                     </tr>
                     <tr>
                     <th scope="row">Humanas</th>
-                    <td><? 
-                        foreach($resultadoCategoria4 as $linha){
-                            echo $linha['nome']. "; ";
+                    <td><?php
+                      		foreach($resultadoCategoria4 as $linha){
+                           echo $linha['nome'] . "; ";
                         }
-                    ?></td>
+                      ?></td>
                     </tr>
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaMascHumFem.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','7'); window.location.href = 'impExaMascHumFem.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
