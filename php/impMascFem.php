@@ -30,6 +30,14 @@
     <!-- ------------------------------------------------------------------------------------>
     <script type="text/javascript">
         
+        
+        /*Controle de seção*/
+        if(window.sessionStorage.getItem("page") != "4")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem('page', '999');
+
+        /*Controle das setas e de tempo*/
+        
         var indice = -1;
         var palavras = JSON.parse('<?=$palavrasJSON?>');
         var quantpalavras = palavras.length;
@@ -41,6 +49,7 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
+                window.sessionStorage.setItem('page', '5');
                 window.location.replace("impExaMascHumFem.php");
             }
             else{

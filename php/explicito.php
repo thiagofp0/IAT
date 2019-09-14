@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
+    <script>
+        if(window.sessionStorage.getItem("page") != "0")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem("page", "999");
+    </script>
 </head>
 <body class="bg">
     <section class="cabecalho">
@@ -30,7 +35,7 @@
             <div class="textTCLE">
                 Por favor preencha as perguntas sobre você:
             </div>
-            <form action="explicitoDao.php" method="POST">
+            <form action="explicitoDao.php" method="POST" onsubmit="window.sessionStorage.setItem('page','1');">
                 <div class="textQuestion">
                     1. Sexo:
                     <div class="textQuestionAns">
