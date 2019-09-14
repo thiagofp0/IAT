@@ -2,7 +2,7 @@
     include_once("conexao.php");
 
     //Pega as palavras do BD
-    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 3 or categoria = 4");
+    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras");
     $palavras = array();
 
     //Passa o resultado para o vetor
@@ -29,9 +29,10 @@
 
     <!-- ------------------------------------------------------------------------------------>
     <script type="text/javascript">
-
+        
+        
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "3")
+        if(window.sessionStorage.getItem("page") != "5")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
 
@@ -48,8 +49,8 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '4');
-                window.location.replace("impMascFem.php");
+                window.sessionStorage.setItem('page', '6');
+                window.location.replace("impExaFemcHumMasc.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';
@@ -83,7 +84,7 @@
             }
             //Seta esquerda
             else if(key == 37){
-                if(palavras[indice].categoria == 3){
+                if(palavras[indice].categoria == 1 || palavras[indice].categoria == 3){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
@@ -95,7 +96,7 @@
             }
             //Seta direita
             else if(key == 39){
-                if(palavras[indice].categoria == 4){
+                if(palavras[indice].categoria == 2 || palavras[indice].categoria == 4){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
@@ -109,7 +110,7 @@
     </script>
     <!-- ------------------------------------------------------------------------------------>
 </head>
-<body class="bg" onload="window.sessionStorage.setItem('a', '1')">
+<body class="bg">
     <section class="cabecalho" id="cabecalhoQuest">
         <h1 id="titulo">TESTE DE ASSOCIAÇÃO IMPLÍCITA</h1>
     </section>
@@ -117,16 +118,16 @@
         <div class="grupos">
             <div class="grupo1">
                 <h6>Aperte seta para esquerda</h6><br>
-                <h1>Exatas</h1>
+                <h1>Exatas ou Masculino</h1>
             </div>
             <div class="grupo2">
                 <h6>Aperte seta para direita</h6><br>
-                <h1>Humanas</h1>
+                <h1>Humanas ou Feminino</h1>
             </div>
         </div>
         <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">
-        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Ciência</strong>.</p>
-        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Artes</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Exatas ou Masculino</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Humanas ou Feminino</strong>.</p>
         <p>Aparecerá apenas um item por vez!</p>
         <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
         <p> <u> Vá o mais rápido possível </u> enquanto é preciso</p>

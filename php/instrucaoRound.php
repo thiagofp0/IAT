@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
+    <script>
+        if(window.sessionStorage.getItem("page") != "2")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem('page', '999');
+    </script>
 </head>
 <body class="bg">
     <section class="cabecalho">
@@ -88,7 +93,7 @@
                 </tbody>
             </table>
             <p>São sete partes. As instruções mudam para cada parte. <strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.location.href = 'impExaHum.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page', '3'); window.location.href = 'impExaHum.php'">Continuar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
