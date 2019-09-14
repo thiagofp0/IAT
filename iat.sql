@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Set-2019 às 02:48
+-- Generation Time: 14-Set-2019 às 02:56
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -220,7 +220,13 @@ CREATE TABLE `explicito` (
 
 INSERT INTO `explicito` (`id`, `sexo`, `curso`, `idade`, `cor`, `q6`, `q7`, `q8`, `q9`, `q10a`, `q10b`, `q10c`, `q10d`, `q10e`, `q10f`, `q11a`, `q11b`, `q11c`, `genero`) VALUES
 (1, 1, 17, 0, 'Branca', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
-(2, 0, 2, 11, 'Parda', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino');
+(2, 0, 2, 11, 'Parda', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(3, 0, 33, 50, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(4, 0, 33, 18, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(5, 0, 33, 20, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(6, 0, 33, 10, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(7, 0, 33, 20, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino'),
+(8, 0, 33, 1, 'Preta', 'Fortemente masculino', 'Fortemente masculino', 'Gosto Muito', 'Gosto Muito', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Extremamente importante', 'Se identifica fortemente com o masculino');
 
 -- --------------------------------------------------------
 
@@ -239,36 +245,34 @@ CREATE TABLE `palavras` (
 --
 
 INSERT INTO `palavras` (`id`, `nome`, `categoria`) VALUES
-(1, 'avô', 1),
-(2, 'esposa', 2),
-(3, 'fêmea', 2),
-(4, 'filha', 2),
-(5, 'filho', 1),
-(6, 'homem', 1),
-(7, 'mãe', 2),
-(8, 'marido', 1),
-(9, 'masculino', 1),
+(1, 'homem', 1),
+(2, 'filho', 1),
+(3, 'menino', 1),
+(4, 'tio', 1),
+(5, 'marido', 1),
+(6, 'ele', 1),
+(7, 'dele', 1),
+(8, 'mulher', 2),
+(9, 'filha', 2),
 (10, 'menina', 2),
-(11, 'menino', 1),
-(12, 'mulher', 2),
-(13, 'pai', 1),
-(14, 'tia', 2),
-(15, 'tio', 1),
-(16, 'avó', 2),
-(17, 'astronomia', 3),
-(18, 'matemática', 3),
+(11, 'tia', 2),
+(12, 'esposa', 2),
+(13, 'ela', 2),
+(14, 'dela', 2),
+(15, 'matemática', 3),
+(16, 'engenharia', 3),
+(17, 'física', 3),
+(18, 'astronomia', 3),
 (19, 'química', 3),
-(20, 'física', 3),
-(21, 'biologia', 3),
-(22, 'geologia', 3),
-(23, 'engenharia', 3),
-(24, 'história', 4),
-(25, 'artes', 4),
-(26, 'humanidades', 4),
-(27, 'inglês', 4),
-(28, 'filosofia', 4),
-(29, 'música', 4),
-(30, 'literatura', 4);
+(20, 'geologia', 3),
+(21, 'estatística', 3),
+(22, 'português', 4),
+(23, 'literatura', 4),
+(24, 'filosofia', 4),
+(25, 'história', 4),
+(26, 'sociologia', 4),
+(27, 'pedagogia', 4),
+(28, 'jornalismo', 4);
 
 --
 -- Indexes for dumped tables
@@ -307,13 +311,13 @@ ALTER TABLE `curso`
 -- AUTO_INCREMENT for table `explicito`
 --
 ALTER TABLE `explicito`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `palavras`
 --
 ALTER TABLE `palavras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables

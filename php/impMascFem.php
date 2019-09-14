@@ -10,9 +10,16 @@
         $palavras[] = $row;
     }
 
+
+    /*Completa até dar 20*/
+    while(sizeof($palavras) < 20){
+        $palavras[] = $palavras[rand(0, sizeof($palavras) - 1)];
+    }
+
     //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
     shuffle($palavras);
-    $palavrasJSON = json_encode(array_slice($palavras, 0, 10));
+
+    $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -32,9 +39,9 @@
         
         
         /*Controle de seção*/
-        // if(window.sessionStorage.getItem("page") != "4")
-        //     window.location.replace("index.php");
-        // window.sessionStorage.setItem('page', '999');
+        if(window.sessionStorage.getItem("page") != "5")
+            window.location.replace("index.php");
+        window.sessionStorage.setItem('page', '999');
 
         /*Controle das setas e de tempo*/
         
@@ -49,7 +56,7 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '5');
+                window.sessionStorage.setItem('page', '6');
                 window.location.replace("instrucaoRound3.php");
             }
             else{
