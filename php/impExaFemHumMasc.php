@@ -12,7 +12,7 @@
 
     //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
     shuffle($palavras);
-    $palavrasJSON = json_encode(array_slice($palavras, 0, 10));
+    $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
