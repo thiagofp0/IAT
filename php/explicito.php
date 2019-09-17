@@ -39,7 +39,8 @@
                 <div class="textQuestion">
                     1. Sexo:
                     <div class="textQuestionAns">
-                        <select name = "sexo" class="form-control">
+                        <select name = "sexo" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="0"> Feminino </option>
                             <option value="1"> Masculino </option>
                         </select>
@@ -49,7 +50,8 @@
                 <div class="textQuestion">
                     2. Qual o seu curso? 
                     <div class="textQuestionAns">
-                        <select name = "curso" class="form-control">
+                        <select name = "curso" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <?php
                                 
                                 $sql = "SELECT * FROM curso ORDER BY nome;";
@@ -83,7 +85,8 @@
                 <div class="textQuestion">
                     5. Cor: 
                     <div class="textQuestionAns">
-                        <select name = "cor" class="form-control">
+                        <select name = "cor" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Preta"> Preta </option>
                             <option value="Branca"> Branca </option>
                             <option value="Parda"> Parda </option>
@@ -100,7 +103,8 @@
                 <div class="textQuestion">
                     6. Por favor, avalie quanto você associa as <b>Ciências Exatas e Naturais</b> com homens e mulheres: 
                     <div class="textQuestionAns">
-                        <select name = "q6" class="form-control">
+                        <select name = "q6" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Fortemente masculino"> Fortemente masculino </option>
                             <option value="Moderadamente masculino"> Moderadamente masculino </option>
                             <option value="Ligeiramente masculino"> Ligeiramente masculino </option>
@@ -115,7 +119,8 @@
                 <div class="textQuestion">
                     7. Por favor, avalie quanto você associa as <b>Ciências Humanas</b> com homens e mulheres: 
                     <div class="textQuestionAns">
-                        <select name = "q7" class="form-control">
+                        <select name = "q7" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Fortemente masculino"> Fortemente masculino </option>
                             <option value="Moderadamente masculino"> Moderadamente masculino </option>
                             <option value="Ligeiramente masculino"> Ligeiramente masculino </option>
@@ -130,7 +135,8 @@
                 <div class="textQuestion">
                     8. Por favor, avalie sua atitude com relação às <b>Ciências Exatas e Naturais</b>: 
                     <div class="textQuestionAns">
-                        <select name = "q8" class="form-control">
+                        <select name = "q8" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Gosto Muito"> Gosto Muito </option>
                             <option value="Gosto"> Gosto </option>
                             <option value="Não gosto nem desgosto"> Não gosto nem desgosto </option>
@@ -143,7 +149,8 @@
                 <div class="textQuestion">
                     9. Por favor, avalie sua atitude com relação às <b>Ciências Humanas</b>: 
                     <div class="textQuestionAns">
-                        <select name = "q9" class="form-control">
+                        <select name = "q9" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Gosto Muito"> Gosto Muito </option>
                             <option value="Gosto"> Gosto </option>
                             <option value="Não gosto nem desgosto"> Não gosto nem desgosto </option>
@@ -163,7 +170,8 @@
                         a) Em média, homens e mulheres diferem na sua disposição em devotar o tempo
     exigido por essas carreiras de prestígio.
                         <div class="textQuestionAns">
-                            <select name = "q10a" class="form-control">
+                            <select name = "q10a" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -177,7 +185,8 @@
                         b) Em média, homens e mulheres diferem na sua disposição em passar tempo longe
     de suas famílias.
                         <div class="textQuestionAns">
-                            <select name = "q10b" class="form-control">
+                            <select name = "q10b" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -191,7 +200,8 @@
                         c) São encontradas diferentes proporções de homens e mulheres entre as pessoas
 com maiores níveis de habilidade matemática.
                         <div class="textQuestionAns">
-                            <select name = "q10c" class="form-control">
+                            <select name = "q10c" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -205,7 +215,8 @@ com maiores níveis de habilidade matemática.
                         d) Em média, homens e mulheres diferem naturalmente nos seus interesses
 científicos.
                         <div class="textQuestionAns">
-                            <select name = "q10d" class="form-control">
+                            <select name = "q10d" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -219,7 +230,8 @@ científicos.
                         e) Direta ou indiretamente, meninos e meninas tendem a receber níveis diferentes de
 encorajamento para desenvolver seus interesses científicos.
                         <div class="textQuestionAns">
-                            <select name = "q10e" class="form-control">
+                            <select name = "q10e" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -233,7 +245,8 @@ encorajamento para desenvolver seus interesses científicos.
                         f) Em média, consciente ou inconscientemente, os homens são favorecidos em
 contratações e promoções.
                         <div class="textQuestionAns">
-                            <select name = "q10f" class="form-control">
+                            <select name = "q10f" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -251,7 +264,8 @@ importância: <br><br>
                     <div class="textQuestionAns">
                         a) Ser competente em ciência.
                         <div class="textQuestionAns">
-                            <select name = "q11a" class="form-control">
+                            <select name = "q11a" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -264,7 +278,8 @@ importância: <br><br>
                     <div class="textQuestionAns">
                         b) Ser competente em matemática.
                         <div class="textQuestionAns">
-                            <select name = "q11b" class="form-control">
+                            <select name = "q11b" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -277,7 +292,8 @@ importância: <br><br>
                     <div class="textQuestionAns">
                         c) Ser competente nas humanidades.
                         <div class="textQuestionAns">
-                            <select name = "q11c" class="form-control">
+                            <select name = "q11c" class="form-control" required>
+                                <option value="" selected="selected" disabled>Selecione</option>
                                 <option value="Extremamente importante"> Extremamente importante </option>
                                 <option value="Muito Importante"> Muito Importante </option>
                                 <option value="Um pouco importante"> Um pouco importante </option>
@@ -291,7 +307,8 @@ importância: <br><br>
                 <div class="textQuestion">
                     12. Como você classifica a sua identidade de gênero:
                     <div class="textQuestionAns">
-                        <select name = "genero" class="form-control">
+                        <select name = "genero" class="form-control" required>
+                            <option value="" selected="selected" disabled>Selecione</option>
                             <option value="Se identifica fortemente com o masculino"> Se identifica fortemente com o masculino </option>
                             <option value="Se identifica moderadamente com o masculino"> Se identifica moderadamente com o masculino </option>
                             <option value="Se identifica levemente com o masculino"> Se identifica levemente com o masculino </option>
