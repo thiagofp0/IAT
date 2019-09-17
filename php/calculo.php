@@ -12,7 +12,7 @@
     <script>
         if(window.sessionStorage.getItem("page") != "10")
             window.location.replace("index.php");
-        window.sessionStorage.setItem("page", "999");
+        window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
         tempos1 = JSON.parse(window.sessionStorage.getItem('temposCompativel'));
@@ -81,6 +81,38 @@
         }
     </script>
 </head>
+<style>
+    .img{
+        margin-left: 41%;
+        padding-top: 1%;
+    }
+    .rodape{
+        background-color: black;
+        position: absolute;
+        height: 100px;
+        margin-top: -70px;
+        bottom: 0;
+        width: 100.12%;
+    }
+    .bg{
+       position: relative;
+    }
+    .container{
+        height: 50%;
+        margin-bottom: 0px;
+        position: relative;
+    }
+    .alert alert-secondar{
+        margin-bottom: 0px;
+    }
+    #voltar{
+        margin-left: 40%;
+    }
+    #resultado{
+        text-align: center;
+        margin-bottom: 3%;
+    }
+</style>
 <body class="bg" onload="document.getElementById('resultado').innerHTML = resulttext;">
     <section class="cabecalho">
         <h1 id="titulo">TESTE DE ASSOCIAÇÃO IMPLÍCITA</h1>
@@ -88,9 +120,12 @@
     <div class="container">
         <div class="alert alert-secondary">
             <p id="resultado"></p>
-            <button class="btn btn-success" id="Voltar ao início" onclick="window.location.href = 'index.php'">Voltar ao início</button>
+            <button class="btn btn-success" id="voltar" onclick="window.location.href = 'index.php'">Voltar ao início</button>
         </div>
     </div>
+    <div class="rodape">
+        <img src="../img/nb.png" alt="Desenvolvido por No Bugs" class="img">
+</div>
     <script src="../js/bootstrap.js"></script>
 </body>
 </html>
