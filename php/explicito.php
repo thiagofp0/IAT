@@ -128,7 +128,7 @@
                 </div>
 
                 <div class="textQuestion">
-                    8. Por favor, avalie sua atitude com relação às <b>Ciências Exatas e Naturais</b> com homens e mulheres: 
+                    8. Por favor, avalie sua atitude com relação às <b>Ciências Exatas e Naturais</b>: 
                     <div class="textQuestionAns">
                         <select name = "q8" class="form-control">
                             <option value="Gosto Muito"> Gosto Muito </option>
@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="textQuestion">
-                    9. Por favor, avalie sua atitude com relação às <b>Ciências Humanas</b> com homens e mulheres: 
+                    9. Por favor, avalie sua atitude com relação às <b>Ciências Humanas</b>: 
                     <div class="textQuestionAns">
                         <select name = "q9" class="form-control">
                             <option value="Gosto Muito"> Gosto Muito </option>

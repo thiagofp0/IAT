@@ -1,7 +1,6 @@
 <?php
     require('conexao.php');
 	require_once('conexao.php');
-	include('conexao');
 	include_once("conexao.php");
 		
 	if($conexao){
