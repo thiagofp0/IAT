@@ -29,7 +29,11 @@
 
 .textTCLE{
     text-align: justify;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    
+}
+.textoExplicativo{
+    font-size: 15px;
 }
 
 .textQuestion{
@@ -46,7 +50,7 @@
 }
 
 .divBtn{
-    margin-bottom: 10%;
+    margin-bottom: 6%;
 }
 
 .cabecaTabela{
@@ -54,7 +58,7 @@
 }
 
 #divis{
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 #btnContinuar{
@@ -69,4 +73,8 @@
 
 #botaoContinuar{
     margin-left: 45%;
+}
+
+#centralizado{
+    text-align: center;
 }

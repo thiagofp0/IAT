@@ -86,7 +86,7 @@
                 }
             }
             //Seta esquerda
-            else if(key == 37){
+            else if(key == 69){
                 if(palavras[indice].categoria == 2 || palavras[indice].categoria == 3){
                     indice++;
                     mudaPalavra();
@@ -100,7 +100,7 @@
                 }
             }
             //Seta direita
-            else if(key == 39){
+            else if(key == 73){
                 if(palavras[indice].categoria == 1 || palavras[indice].categoria == 4){
                     indice++;
                     mudaPalavra();
@@ -124,20 +124,20 @@
     <div class="box container" id="boxQuest">
         <div class="grupos">
             <div class="grupo1">
-                <h6>Aperte seta para esquerda</h6><br>
-                <h1>Exatas ou Feminino</h1>
+                <h6>Aperte E</h6><br>
+                <h1>Exatas/Naturais ou Feminino</h1>
             </div>
             <div class="grupo2">
-                <h6>Aperte seta para direita</h6><br>
+                <h6>Aperte I</h6><br>
                 <h1>Humanas ou Masculino</h1>
             </div>
         </div>
         <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">
-        <p>Aperte a tecla <span class="tecla">Seta para a esquerda</span> para itens que pertencem ao grupo <strong>Exatas ou Feminino</strong>.</p>
-        <p>Aperte a tecla <span class="tecla">Seta para a direita</span> para itens que pertencem ao grupo <strong>Humanas ou Masculino</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">E</span> para itens que pertencem ao grupo <strong>Exatas/Naturais ou Feminino</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">I</span> para itens que pertencem ao grupo <strong>Humanas ou Masculino</strong>.</p>
         <p>Aparecerá apenas um item por vez!</p>
         <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
-        <p> <u> Vá o mais rápido possível </u> enquanto é preciso</p>
+        <p> <u> Vá o mais rápido possível </u><strong> sem cometer erros!</strong></p>
         Aperte <span class="tecla">ENTER</span> quando estiver pronto para começar</div>
     </div>
 </body>

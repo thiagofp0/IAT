@@ -23,7 +23,9 @@
         <div class="alert alert-secondary">
             <p>Neste estudo, você completará um Teste de Associação Implícita (IAT), no qual você será solicitado a classificar as palavras em grupos o mais rápido possível. Este estudo deve levar cerca de 10 minutos para ser concluído. No final, você receberá o resultado do IAT juntamente com informações sobre o que isso significa.</p>
             <p>Agradecemos por estar aqui!</p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page', '2'); window.location.href = 'instrucaoRound.php'">Continuar</button>
+            <div id="centralizado">
+            <button class="btn btn-success" id="botaoComecar" onclick="window.sessionStorage.setItem('page', '2'); window.location.href = 'instrucaoRound.php'">Estou pronto para começar</button>
+            </div>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

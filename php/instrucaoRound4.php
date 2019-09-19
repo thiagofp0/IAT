@@ -57,7 +57,7 @@
     <div class="container">
         <div class="alert alert-secondary">
             <h1 class="tituloEtapa">Etapa 4</h1> <br>
-            <p>Neste teste você usará as teclas "seta para a esquerda" e "seta para a direita" para categorizar itens em grupos o mais rápido quanto conseguir.</p>
+            <p>Neste teste você usará as teclas "seta para a esquerda" e "seta para a direita" para categorizar itens em grupos o mais rápido quanto conseguir <strong>sem cometer erros!</strong></p>
             <p>Abaixo estão os itens e os grupos aos quais eles pertencem:  </p>
             <table class="table">
                 <thead class="thead-dark">
@@ -84,7 +84,7 @@
                       ?></td>
                     </tr>
                     <tr>
-                    <th scope="row">Exatas</th>
+                    <th scope="row">Exatas/Naturais</th>
                     <td><?php
                       		foreach($resultadoCategoria3 as $linha){
                            echo $linha['nome'] . "; ";
@@ -102,7 +102,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','9'); window.location.href = 'impExaFemHumMasc.php'">Continuar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','9'); window.location.href = 'impExaFemHumMasc.php'">Começar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

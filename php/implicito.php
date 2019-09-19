@@ -51,7 +51,7 @@
                 }
             }
             //Seta esquerda
-            else if(key == 37){
+            else if(key == 65){
                 if(palavras[indice].categoria == 1){
                     indice++;
                     mudaPalavra();
@@ -61,7 +61,7 @@
                 }
             }
             //Seta direita
-            else if(key == 39){
+            else if(key == 69){
                 if(palavras[indice].categoria == 2){
                     indice++;
                     mudaPalavra();
