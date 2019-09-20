@@ -83,7 +83,6 @@
 </head>
 <style>
     .img{
-        margin-left: 41%;
         padding-top: 1%;
     }
     .rodape{
@@ -93,6 +92,7 @@
         margin-top: -70px;
         bottom: 0;
         width: 100.12%;
+        text-align: center;
     }
     .bg{
        position: relative;
@@ -104,9 +104,6 @@
     }
     .alert alert-secondar{
         margin-bottom: 0px;
-    }
-    #voltar{
-        margin-left: 40%;
     }
     #resultado{
         text-align: center;
@@ -120,7 +117,9 @@
     <div class="container">
         <div class="alert alert-secondary">
             <p id="resultado"></p>
+            <div id="centralizado">
             <button class="btn btn-success" id="voltar" onclick="window.location.href = 'index.php'">Voltar ao início</button>
+            </div>
         </div>
     </div>
     <div class="rodape">

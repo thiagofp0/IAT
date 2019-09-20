@@ -57,7 +57,7 @@
     <div class="container">
         <div class="alert alert-secondary">
             <h1 class="tituloEtapa">Etapa 4</h1> <br>
-            <p>Neste teste você usará as teclas "seta para a esquerda" e "seta para a direita" para categorizar itens em grupos o mais rápido quanto conseguir <strong>sem cometer erros!</strong></p>
+            <p>Neste teste você usará as teclas "E" e "I" para categorizar itens em grupos o mais rápido quanto conseguir <strong>sem cometer erros!</strong></p>
             <p>Abaixo estão os itens e os grupos aos quais eles pertencem:  </p>
             <table class="table">
                 <thead class="thead-dark">
