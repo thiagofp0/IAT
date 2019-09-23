@@ -167,7 +167,7 @@
     quão importante você considera cada fator na explicação dessa diferença. <br><br>
 
                     <div class="textQuestionAns">
-                        a) Em média, homens e mulheres diferem na sua disposição em devotar o tempo
+                        a) Em média, homens e mulheres diferem na sua disposição em empregar o tempo
     exigido por essas carreiras de prestígio.
                         <div class="textQuestionAns">
                             <select name = "q10a" class="form-control" required>
@@ -290,7 +290,7 @@ importância: <br><br>
                     </div>
                     <br>
                     <div class="textQuestionAns">
-                        c) Ser competente nas humanidades.
+                        c) Ser competente em ciências humanas.
                         <div class="textQuestionAns">
                             <select name = "q11c" class="form-control" required>
                                 <option value="" selected="selected" disabled>Selecione</option>

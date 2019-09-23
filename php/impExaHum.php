@@ -69,8 +69,6 @@
             }
         }
 
-        //Tá errado o negócio da cor
-
         //Parte de captura das teclas
         document.onkeyup = function (event) {
             
