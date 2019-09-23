@@ -83,7 +83,7 @@
                 return;
             }
             else if(indice == -1){
-                if(key == 13){
+                if(key == 32){
                     indice++;
                     mudaPalavra();
                     tempoInicio = Date.now(); // Tempo Início
@@ -138,7 +138,7 @@
         <p>Aparecerá apenas um item por vez!</p>
         <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
         <p> <u> Vá o mais rápido possível </u><strong> sem cometer erros!</strong></p>
-        Aperte <span class="tecla">ENTER</span> quando estiver pronto para começar</div>
+        Aperte <span class="tecla">ESPAÇO</span> quando estiver pronto para começar</div>
     </div>
 </body>
 </html>
