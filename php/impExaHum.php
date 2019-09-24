@@ -61,7 +61,7 @@
     <script type="text/javascript">
 
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "3")
+        if(window.sessionStorage.getItem("page") != "5")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
 
@@ -79,10 +79,10 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '4');
+                window.sessionStorage.setItem('page', '6');
                 window.sessionStorage.setItem('tempos1', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros1', erros);
-                window.location.replace("instrucaoRound2.php");
+                window.location.replace("instrucaoRound3.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';

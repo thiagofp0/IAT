@@ -102,7 +102,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','3'); window.location.href = 'impExaHum.php'">Começar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','3'); window.location.href = 'impMascFem.php'">Começar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
