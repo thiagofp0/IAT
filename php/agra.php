@@ -44,7 +44,7 @@
         <div class="alertPreto" role="alert">
             <p class="textoCentro">Agradecemos por participar desta pesquisa!</p>
             <p class="textoCentro">Obrigado!</p>
-            <img src="../img/nb.png" alt="Desenvolvido por No Bugs" class="img">
+            <a href="https://nobugs.com.br"><img src="../img/nb.png" alt="Desenvolvido por No Bugs" class="img"></a>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
