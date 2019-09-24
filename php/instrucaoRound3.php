@@ -57,7 +57,7 @@
     <div class="container">
         <div class="alert alert-secondary">
             <h1 class="tituloEtapa">Etapa 3</h1> <br>
-            <p>Neste teste você usará as teclas "E" e "I" para categorizar itens em grupos o mais rápido quanto conseguir <strong>sem cometer erros!</strong></p>
+            <p>Neste teste você usará as teclas "E" e "I" para categorizar itens em grupos o mais rápido quanto conseguir<strong> sem cometer erros!</strong></p>
             <p>Abaixo estão os itens e os grupos aos quais eles pertencem:  </p>
             <table class="table">
                 <thead class="thead-dark">
@@ -102,7 +102,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','7'); window.location.href = 'impExaMascHumFem.php'">Começar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','7'); window.location.href = 'impFemMasc.php'">Começar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>

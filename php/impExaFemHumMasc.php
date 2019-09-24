@@ -32,7 +32,7 @@
         
         
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "11")
+        if(window.sessionStorage.getItem("page") != "13")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
 
@@ -50,10 +50,10 @@
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '12');
-                window.sessionStorage.setItem('tempos5', JSON.stringify(tempos));
-                window.sessionStorage.setItem('erros5', erros);
-                window.location.replace("instrucaoRound6.php");
+                window.sessionStorage.setItem('page', '14');
+                window.sessionStorage.setItem('tempos6', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros6', erros);
+                window.location.replace("instrucaoRound7.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';

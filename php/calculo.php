@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
     <script>
-        if(window.sessionStorage.getItem("page") != "14")
+        if(window.sessionStorage.getItem("page") != "16")
             window.location.replace("index.php");
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
-        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos4'));
-        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos6'));
+        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos5'));
+        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos7'));
 
         var compatible = 0;
         for (i = 1; i < tempos1.length; i++){
@@ -82,7 +82,7 @@
 
         //Somando os erros totais e exibindo
         var errosTotal = 0;
-        for(var i = 1; i <= 6; i++){
+        for(var i = 1; i <= 7; i++){
             errosTotal += parseInt(window.sessionStorage.getItem("erros" + i), 10);
         }
 

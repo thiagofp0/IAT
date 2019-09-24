@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="../css/principal.css">
     <link rel="stylesheet" href=" ../css/implicito.css">
     <script>
-        if(window.sessionStorage.getItem("page") != "12")
+        if(window.sessionStorage.getItem("page") != "14")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
     </script>
@@ -56,7 +56,7 @@
     </section>
     <div class="container">
         <div class="alert alert-secondary">
-            <h1 class="tituloEtapa">Etapa 6</h1> <br>
+            <h1 class="tituloEtapa">Etapa 7</h1> <br>
             <p>Neste teste você usará as teclas "E" e "I" para categorizar itens em grupos o mais rápido quanto conseguir <strong>sem cometer erros!</strong></p>
             <p>Abaixo estão os itens e os grupos aos quais eles pertencem:  </p>
             <table class="table">
@@ -102,7 +102,7 @@
                 </tbody>
             </table>
             <p><strong> Preste atenção!</strong></p>
-            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','13'); window.location.href = 'impExaFemHumMasc.php'">Começar</button>
+            <button class="btn btn-success" id="botaoContinuar" onclick="window.sessionStorage.setItem('page','15'); window.location.href = 'impExaFemHumMasc2.php'">Começar</button>
         </div>
     </div>
     <script src="../js/bootstrap.js"></script>
