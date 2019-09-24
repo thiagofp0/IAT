@@ -2,7 +2,7 @@
     include_once("conexao.php");
 
     //Pega as palavras do BD
-    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras WHERE categoria = 3 or categoria = 4");
+    $resultado = mysqli_query($conexao, "SELECT nome, categoria FROM palavras");
     $palavras = array();
 
     //Passa o resultado para o vetor
@@ -10,38 +10,8 @@
         $palavras[] = $row;
     }
 
-    //Completa até dar 20
-    while(sizeof($palavras) < 20){
-        $palavras[] = $palavras[rand(0, sizeof($palavras) - 1)];
-    }
-
-    //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
+    //Embaralha as palavras e escolhe só as 20 primeiras para codificar com JSON
     shuffle($palavras);
-
-    //Tira casos de palavras iguasi adjacentes
-    for($i = 0; $i < 19; $i++){
-        if($palavras[$i] == $palavras[$i + 1]){
-            if($i == 0){
-                //Troca a palavra repetida por uma nova, não repetida
-                $aux = $palavras[rand(0, sizeof($palavras) - 1)];
-                while($aux == $palavras[$i + 1]){
-                    $aux = $palavras[rand(0, sizeof($palavras) - 1)];
-                }
-
-                $palavras[$i] = $aux;
-            }
-            else{
-                //Troca a palavra repetida por uma nova, não repetida
-                $aux = $palavras[rand(0, sizeof($palavras) - 1)];
-                while($aux == $palavras[$i + 1] or $aux == $palavras[$i - 1]){
-                    $aux = $palavras[rand(0, sizeof($palavras) - 1)];
-                }
-
-                $palavras[$i] = $aux;
-            }
-        }
-    }
-    
     $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>
 <!DOCTYPE html>
@@ -59,9 +29,10 @@
 
     <!-- ------------------------------------------------------------------------------------>
     <script type="text/javascript">
-
+        
+        
         /*Controle de seção*/
-        if(window.sessionStorage.getItem("page") != "3")
+        if(window.sessionStorage.getItem("page") != "13")
             window.location.replace("index.php");
         window.sessionStorage.setItem('page', '999');
 
@@ -72,17 +43,17 @@
         var quantpalavras = palavras.length;
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
-        var erros = 0; //erros nessa seção
+        var erros = 0; //Erros cometidos nessa seção
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
         function mudaPalavra(){
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
-                window.sessionStorage.setItem('page', '4');
-                window.sessionStorage.setItem('tempos1', JSON.stringify(tempos));
-                window.sessionStorage.setItem('erros1', erros);
-                window.location.replace("instrucaoRound2.php");
+                window.sessionStorage.setItem('page', '14');
+                window.sessionStorage.setItem('tempos6', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros6', erros);
+                window.location.replace("calculo.php");
             }
             else{
                 document.getElementById("palavra").style.fontSize = '60px';
@@ -95,6 +66,8 @@
                 document.getElementById("palavra").style.color = 'green';
             }
         }
+
+        //Tá errado o negócio da cor
 
         //Parte de captura das teclas
         document.onkeyup = function (event) {
@@ -114,11 +87,12 @@
             }
             //Seta esquerda
             else if(key == 69){
-                if(palavras[indice].categoria == 3){
+                if(palavras[indice].categoria == 2 || palavras[indice].categoria == 3){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice - 1] = aux - tempoInicio; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
@@ -127,11 +101,12 @@
             }
             //Seta direita
             else if(key == 73){
-                if(palavras[indice].categoria == 4){
+                if(palavras[indice].categoria == 1 || palavras[indice].categoria == 4){
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice - 1] = aux - tempoInicio; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
+                    tempoInicio = aux;
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
@@ -142,7 +117,7 @@
     </script>
     <!-- ------------------------------------------------------------------------------------>
 </head>
-<body class="bg" onload="window.sessionStorage.setItem('a', '1')">
+<body class="bg">
     <section class="cabecalho" id="cabecalhoQuest">
         <h1 id="titulo">TESTE DE ASSOCIAÇÃO IMPLÍCITA</h1>
     </section>
@@ -150,16 +125,16 @@
         <div class="grupos">
             <div class="grupo1">
                 <h6>Aperte E</h6><br>
-                <h1>Exatas/Naturais</h1>
+                <h1>Exatas/Naturais ou Feminino</h1>
             </div>
             <div class="grupo2">
                 <h6>Aperte I</h6><br>
-                <h1>Humanas</h1>
+                <h1>Humanas ou Masculino</h1>
             </div>
         </div>
         <div class="inboxText" id = "palavra" onkeydown="apertouTecla(event)">
-        <p>Aperte a tecla <span class="tecla">E</span> para itens que pertencem ao grupo <strong>Exatas/Naturais</strong>.</p>
-        <p>Aperte a tecla <span class="tecla">I</span> para itens que pertencem ao grupo <strong>Humanas</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">E</span> para itens que pertencem ao grupo <strong>Exatas/Naturais ou Feminino</strong>.</p>
+        <p>Aperte a tecla <span class="tecla">I</span> para itens que pertencem ao grupo <strong>Humanas ou Masculino</strong>.</p>
         <p>Aparecerá apenas um item por vez!</p>
         <p>Caso você cometer um erro, o item passará a assumir a cor vermelha. Aperte a outra tecla para continuar</p>
         <p> <u> Vá o mais rápido possível </u><strong> sem cometer erros!</strong></p>

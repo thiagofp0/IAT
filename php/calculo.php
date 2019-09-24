@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../css/style_table.css">
     <link rel="stylesheet" href="../css/principal.css">
     <script>
-        if(window.sessionStorage.getItem("page") != "10")
+        if(window.sessionStorage.getItem("page") != "14")
             window.location.replace("index.php");
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
-        tempos1 = JSON.parse(window.sessionStorage.getItem('temposCompativel'));
-        tempos2 = JSON.parse(window.sessionStorage.getItem('temposIncompativel'));
+        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos4'));
+        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos6'));
 
         var compatible = 0;
         for (i = 1; i < tempos1.length; i++){
@@ -79,6 +79,14 @@
         else{ 
             resulttext = "Você não associa masculino com exatas mais do que associa feminino com exatas";
         }
+
+        //Somando os erros totais e exibindo
+        var errosTotal = 0;
+        for(var i = 1; i <= 6; i++){
+            errosTotal += parseInt(window.sessionStorage.getItem("erros" + i), 10);
+        }
+
+        resulttext += "<br> Número de Erros: " + errosTotal;
     </script>
 </head>
 <style>

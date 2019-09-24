@@ -10,7 +10,7 @@
         $palavras[] = $row;
     }
 
-    //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
+    //Embaralha as palavras e escolhe só as 20 primeiras para codificar com JSON
     shuffle($palavras);
 
     $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
@@ -52,8 +52,8 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '8');
-                window.sessionStorage.setItem('temposCompativel', JSON.stringify(tempos));
-                window.sessionStorage.setItem('errosCompativel', erros);
+                window.sessionStorage.setItem('tempos3', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros3', erros);
                 window.location.replace("instrucaoRound4.php");
             }
             else{

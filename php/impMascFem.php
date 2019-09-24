@@ -19,6 +19,30 @@
     //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
     shuffle($palavras);
 
+    //Tira casos de palavras iguasi adjacentes
+    for($i = 0; $i < 19; $i++){
+        if($palavras[$i] == $palavras[$i + 1]){
+            if($i == 0){
+                //Troca a palavra repetida por uma nova, não repetida
+                $aux = $palavras[rand(0, sizeof($palavras) - 1)];
+                while($aux == $palavras[$i + 1]){
+                    $aux = $palavras[rand(0, sizeof($palavras) - 1)];
+                }
+
+                $palavras[$i] = $aux;
+            }
+            else{
+                //Troca a palavra repetida por uma nova, não repetida
+                $aux = $palavras[rand(0, sizeof($palavras) - 1)];
+                while($aux == $palavras[$i + 1] or $aux == $palavras[$i - 1]){
+                    $aux = $palavras[rand(0, sizeof($palavras) - 1)];
+                }
+
+                $palavras[$i] = $aux;
+            }
+        }
+    }
+
     $palavrasJSON = json_encode(array_slice($palavras, 0, 20));
 ?>
 <!DOCTYPE html>
@@ -50,6 +74,7 @@
         var quantpalavras = palavras.length;
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
+        var erros = 0;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -57,6 +82,8 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '6');
+                window.sessionStorage.setItem('tempos2', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros2', erros);
                 window.location.replace("instrucaoRound3.php");
             }
             else{
@@ -95,10 +122,11 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
             //Seta direita
@@ -107,10 +135,11 @@
                     indice++;
                     mudaPalavra();
                     let aux = Date.now();
-                    tempos[indice] = (aux - tempoInicio)/1000; //Tempo gasto na palavra
+                    tempos[indice - 1] = (aux - tempoInicio); //Tempo gasto na palavra
                 }
                 else{
                     document.getElementById("palavra").style.color = 'red';
+                    erros++;
                 }
             }
         }
