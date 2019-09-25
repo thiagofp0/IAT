@@ -129,12 +129,12 @@
             <button class="btn btn-success" id="voltar" onclick="window.location.href = 'index.php'">Voltar ao início</button>
             </div>
             <div id="centralizado" style="margin-top: 2%;"> 
-                <a href="https://nobugs.com.br"><button type="button" class="btn btn-light" id="saibaMais" >Saber mais sobre o IAT</button></a>
+                <a href="https://nobugs.com.br/?utm_source=referral&utm_medium=dpnb&utm_campaign=iat"><button type="button" class="btn btn-light" id="saibaMais" >Saber mais sobre o IAT</button></a>
             </div>
         </div>
     </div>
     <div class="rodape">
-        <a href="https://nobugs.com.br"><img src="../img/nb.png" alt="Desenvolvido por No Bugs" class="img"></a>
+        <a href="https://nobugs.com.br/?utm_source=referral&utm_medium=dpnb&utm_campaign=iat"><img src="../img/nb.png" alt="Desenvolvido por No Bugs" class="img"></a>
 </div>
     <script src="../js/bootstrap.js"></script>
 </body>
