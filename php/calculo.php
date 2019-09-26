@@ -129,7 +129,8 @@
             <button class="btn btn-success" id="voltar" onclick="window.location.href = 'index.php'">Voltar ao início</button>
             </div>
             <div id="centralizado" style="margin-top: 2%;"> 
-                <a href="https://nobugs.com.br/?utm_source=referral&utm_medium=dpnb&utm_campaign=iat"><button type="button" class="btn btn-light" id="saibaMais" >Saber mais sobre o IAT</button></a>
+				<h5>Para saber mais sobre o seu resultado e tirar outras dúvidas sobre o TAI, visite o site do Project Implicit (em português) clicando no botão abaixo</h5>
+                <a href="https://implicit.harvard.edu/implicit/brazil/background/faqs.html"><button type="button" class="btn btn-light" id="saibaMais" >Saber mais sobre o teste</button></a>
             </div>
         </div>
     </div>
