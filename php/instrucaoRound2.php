@@ -31,6 +31,7 @@
 
     //Embaralha as palavras e escolhe só as 10 primeiras para codificar com JSON
     //shuffle($palavras);
+	
 ?>
 <!DOCTYPE html>
 <html>
