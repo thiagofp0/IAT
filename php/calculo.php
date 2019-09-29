@@ -15,8 +15,26 @@
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
-        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos5'));
-        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos7'));
+
+        // Pegando os tempos por bloco de testes
+        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos1'));
+        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos2'));
+        tempos3 = JSON.parse(window.sessionStorage.getItem('tempos3'));
+        tempos4 = JSON.parse(window.sessionStorage.getItem('tempos4'));
+        tempos5 = JSON.parse(window.sessionStorage.getItem('tempos5'));
+        tempos6 = JSON.parse(window.sessionStorage.getItem('tempos6'));
+        tempos7 = JSON.parse(window.sessionStorage.getItem('tempos7'));
+
+        // Pegando os erros por bloco de teste
+
+        erros1 = JSON.parse(window.sessionStorage.getItem('erros1'));
+        erros2 = JSON.parse(window.sessionStorage.getItem('erros2'));
+        erros3 = JSON.parse(window.sessionStorage.getItem('erros3'));
+        erros4 = JSON.parse(window.sessionStorage.getItem('erros4'));
+        erros5 = JSON.parse(window.sessionStorage.getItem('erros5'));
+        erros6 = JSON.parse(window.sessionStorage.getItem('erros6'));
+        erros7 = JSON.parse(window.sessionStorage.getItem('erros7'));
+
 
         var compatible = 0;
         for (i = 1; i < tempos1.length; i++){
@@ -114,11 +132,26 @@
 			resultado
 		*/
 		dados = {
+
+            tempos1: tempos1,
+            tempos2: tempos2,
+            tempos3: tempos3,
+            tempos4: tempos4,
+            tempos5: tempos5,
+            tempos6: tempos6,
+            tempos7: tempos7,
+
+            erros1: erros1,
+            erros2: erros2,
+            erros3: erros3,
+            erros4: erros4,
+            erros5: erros5,
+            erros6: erros6,
+            erros7: erros7,
+
 			score: score,
-			severity: severity,
-			resultado: tvalue
+			severity: severity
 		};
-		
 		postAjax('salvarBD.php', dados, function(data){ console.log(data); });
     </script>
 </head>
