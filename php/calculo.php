@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/principal.css">
     <script>
         if(window.sessionStorage.getItem("page") != "16")
-            //window.location.replace("index.php");
+            window.location.replace("index.php");
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
@@ -88,55 +88,59 @@
 
         resulttext += "<br> Número de Erros: " + errosTotal;
 		
-		// AJAX
-		function postAjax(url, data, success) {
-			var params = typeof data == 'string' ? data : Object.keys(data).map(
-					function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
-				).join('&');
+        //Capturando os dados necessarios
+        
+        //ID
+        id = window.sessionStorage.getItem('idExplicito');
 
-			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-			xhr.open('POST', url);
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
-			};
-			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-			xhr.send(params);
-			return xhr;
-		}
-		
-		/*
-			tempo por bloco
-			número de erro por blocos
-			
-			score
-			severity
-			resultado
-		*/
-		dados = {
+        //Tempos
+        t1 = JSON.parse(window.sessionStorage.getItem('tempos1')).reduce((a, b) => a + b, 0);
+        t2 = JSON.parse(window.sessionStorage.getItem('tempos2')).reduce((a, b) => a + b, 0);
+        t3 = JSON.parse(window.sessionStorage.getItem('tempos3')).reduce((a, b) => a + b, 0);
+        t4 = JSON.parse(window.sessionStorage.getItem('tempos4')).reduce((a, b) => a + b, 0);
+        t5 = JSON.parse(window.sessionStorage.getItem('tempos5')).reduce((a, b) => a + b, 0);
+        t6 = JSON.parse(window.sessionStorage.getItem('tempos6')).reduce((a, b) => a + b, 0);
+        t7 = JSON.parse(window.sessionStorage.getItem('tempos7')).reduce((a, b) => a + b, 0);
 
-            id: id;
+        //Erros
+        e1 = window.sessionStorage.getItem('erros1');
+        e2 = window.sessionStorage.getItem('erros2');
+        e3 = window.sessionStorage.getItem('erros3');
+        e4 = window.sessionStorage.getItem('erros4');
+        e5 = window.sessionStorage.getItem('erros5');
+        e6 = window.sessionStorage.getItem('erros6');
+        e7 = window.sessionStorage.getItem('erros7');
 
-            tempo1: tempo1,
-            tempo2: tempo2,
-            tempo3: tempo3,
-            tempo4: tempo4,
-            tempo5: tempo5,
-            tempo6: tempo6,
-            tempo7: tempo7,
-
-            erros1: erros1,
-            erros2: erros2,
-            erros3: erros3,
-            erros4: erros4,
-            erros5: erros5,
-            erros6: erros6,
-            erros7: erros7,
-
-			score: score,
-			severity: severity
-		};
-		postAjax('salvarBD.php', dados, function(data){ console.log(data); });
+        //AJAX
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "salvarTempos.php", true);
+        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        var json;
+        xhttp.onload = function(){ 
+            json = JSON.parse('' + xhttp.responseText)
+            if(json.resultado == 0){
+                resulttext += "<br><font color='red'> Ocorreu um erro no banco de dados! Repita o teste mais tarde! </font>"
+            }
+        };
+        xhttp.send(
+            "id=" + id +
+            "&t1=" + t1 +
+            "&t2=" + t2 +
+            "&t3=" + t3 +
+            "&t4=" + t4 +
+            "&t5=" + t5 +
+            "&t6=" + t6 +
+            "&t7=" + t7 +
+            "&e1=" + e1 +
+            "&e2=" + e2 +
+            "&e3=" + e3 +
+            "&e4=" + e4 +
+            "&e5=" + e5 +
+            "&e6=" + e6 +
+            "&e7=" + e7 +
+            "&score=" + tvalue +
+            "&severity=" + severity 
+        );
     </script>
 </head>
 <style>
