@@ -44,6 +44,7 @@
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
         var erros = 0; //Erros cometidos nessa seção
+        var tmp7;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -53,6 +54,12 @@
                 window.sessionStorage.setItem('page', '16');
                 window.sessionStorage.setItem('tempos7', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros7', erros);
+
+                //salvando o tempo em sessão
+
+                tmp7 = (Date.now() - tempoInicio);
+                window.sessionStorage.setItem('tmp7', tmp7);
+
                 window.location.replace("calculo.php");
             }
             else{

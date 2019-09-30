@@ -75,6 +75,7 @@
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
         var erros = 0;
+        var tmp3;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -84,6 +85,7 @@
                 window.sessionStorage.setItem('page', '12');
                 window.sessionStorage.setItem('tempos5', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros5', erros);
+
                 window.location.replace("instrucaoRound6.php");
             }
             else{

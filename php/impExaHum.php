@@ -73,6 +73,7 @@
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
         var erros = 0; //erros nessa seção
+        var tmp1;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -82,6 +83,12 @@
                 window.sessionStorage.setItem('page', '6');
                 window.sessionStorage.setItem('tempos1', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros1', erros);
+
+                //salvando o tempo em sessão
+
+                tmp1 = (Date.now() - tempoInicio);
+                window.sessionStorage.setItem('tmp1', tmp1);
+
                 window.location.replace("instrucaoRound3.php");
             }
             else{

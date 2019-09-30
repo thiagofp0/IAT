@@ -45,6 +45,7 @@
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
         var erros = 0; //Erros cometidos nessa seção
+        var tmp4;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -52,8 +53,19 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '8');
+<<<<<<< HEAD
                 window.sessionStorage.setItem('tempos3', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros3', erros);
+=======
+                window.sessionStorage.setItem('tempos4', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros4', erros);
+
+                 //salvando o tempo em sessão
+
+                tmp4 = (Date.now() - tempoInicio);
+                window.sessionStorage.setItem('tmp4', tmp4);
+
+>>>>>>> 88613aa0e8e593f3701513807c88c4bdcd2023ba
                 window.location.replace("instrucaoRound4.php");
             }
             else{

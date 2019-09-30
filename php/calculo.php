@@ -114,11 +114,28 @@
 			resultado
 		*/
 		dados = {
+
+            id: id;
+
+            tempo1: tempo1,
+            tempo2: tempo2,
+            tempo3: tempo3,
+            tempo4: tempo4,
+            tempo5: tempo5,
+            tempo6: tempo6,
+            tempo7: tempo7,
+
+            erros1: erros1,
+            erros2: erros2,
+            erros3: erros3,
+            erros4: erros4,
+            erros5: erros5,
+            erros6: erros6,
+            erros7: erros7,
+
 			score: score,
-			severity: severity,
-			resultado: tvalue
+			severity: severity
 		};
-		
 		postAjax('salvarBD.php', dados, function(data){ console.log(data); });
     </script>
 </head>
