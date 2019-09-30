@@ -15,7 +15,7 @@
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
-        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos5'));
+        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos4'));
         tempos2 = JSON.parse(window.sessionStorage.getItem('tempos7'));
 
         var compatible = 0;
@@ -70,7 +70,7 @@
         
         if (tvalue < 0 && severity != ""){ 
             resulttext = "Você associa feminino com exatas e masculino com humanas " + severity;
-            resulttext + " do que feminino com humanas e masculino com exatas";
+            resulttext += " do que feminino com humanas e masculino com exatas";
         }
         else if (tvalue > 0 && severity != ""){ 
             resulttext = "Você associa masculino com exatas e feminino com humanas" + severity;

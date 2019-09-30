@@ -82,8 +82,8 @@
             if(indice >= palavras.length){
                 document.getElementById("palavra").style.fontSize = '60px';
                 window.sessionStorage.setItem('page', '12');
-                window.sessionStorage.setItem('tempos3', JSON.stringify(tempos));
-                window.sessionStorage.setItem('erros3', erros);
+                window.sessionStorage.setItem('tempos5', JSON.stringify(tempos));
+                window.sessionStorage.setItem('erros5', erros);
                 window.location.replace("instrucaoRound6.php");
             }
             else{
