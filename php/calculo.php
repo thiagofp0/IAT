@@ -61,23 +61,29 @@
 
         var severity = "";
         
-        if (Math.abs(tvalue) > 2.89) { severity = " <b>muito mais</b> que "; }
-	    else if (Math.abs(tvalue) > 2.64) { severity = " <b>mais</b> que "; }	
-	    else if (Math.abs(tvalue) > 1.99) { severity = " <b>um pouco mais</b> que "; }
-	    else if (Math.abs(tvalue) > 1.66) { severity = " <b>ligeiramente mais</b> que "; }
+
+        var resultado = 0;
+
+        if (Math.abs(tvalue) > 2.89) { severity = " <b>muito mais</b> que ";}
+	    else if (Math.abs(tvalue) > 2.64) { severity = " <b>mais</b> que "; resultado += 1;}	
+	    else if (Math.abs(tvalue) > 1.99) { severity = " <b>um pouco mais</b> que "; resultado += 2}
+	    else if (Math.abs(tvalue) > 1.66) { severity = " <b>ligeiramente mais</b> que "; resultado += 3}
 
         var resulttext = "";
         
         if (tvalue < 0 && severity != ""){ 
             resulttext = "Você associa feminino com exatas e masculino com humanas " + severity;
             resulttext += " do que feminino com humanas e masculino com exatas";
+            resultado = 9 - resultado; 
         }
         else if (tvalue > 0 && severity != ""){ 
             resulttext = "Você associa masculino com exatas e feminino com humanas" + severity;
             resulttext += " do que masculino com humanas e feminino com exatas";
+            resultado += 1;
         }
         else{ 
             resulttext = "Você não associa masculino com exatas mais do que associa feminino com exatas";
+            resultado = 5;
         }
 
         //Somando os erros totais e exibindo
@@ -139,7 +145,8 @@
             "&e6=" + e6 +
             "&e7=" + e7 +
             "&score=" + tvalue +
-            "&severity=" + severity 
+            "&severity=" + Math.abs(tvalue) +
+            "&resultado" + resultado
         );
     </script>
 </head>

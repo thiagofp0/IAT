@@ -18,9 +18,10 @@
     $erros7 = $_POST['e7'];
     $score = $_POST['score'];
     $severity = $_POST['severity'];
+    $result = $_POST['resultado'];
 
     if($conexao){
-        $sql = "INSERT INTO implicito VALUES ($idExplicito, $tempos1, $erros1, $tempos2, $erros2, $tempos3, $erros3, $tempos4, $erros4, $tempos5, $erros5, $tempos6, $erros6, $tempos7, $erros7, $score, '$severity');";
+        $sql = "INSERT INTO implicito VALUES ($idExplicito, $tempos1, $erros1, $tempos2, $erros2, $tempos3, $erros3, $tempos4, $erros4, $tempos5, $erros5, $tempos6, $erros6, $tempos7, $erros7, $score, $severity, $result);";
         $resultado = mysqli_query($conexao, $sql);
 
         if($resultado){
