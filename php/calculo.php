@@ -148,6 +148,7 @@
             "&severity=" + Math.abs(tvalue) +
             "&resultado" + resultado
         );
+        
     </script>
 </head>
 <style>
