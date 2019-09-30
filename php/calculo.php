@@ -66,8 +66,8 @@
 
         if (Math.abs(tvalue) > 2.89) { severity = " <b>muito mais</b> que ";}
 	    else if (Math.abs(tvalue) > 2.64) { severity = " <b>mais</b> que "; resultado += 1;}	
-	    else if (Math.abs(tvalue) > 1.99) { severity = " <b>um pouco mais</b> que "; resultado += 2}
-	    else if (Math.abs(tvalue) > 1.66) { severity = " <b>ligeiramente mais</b> que "; resultado += 3}
+	    else if (Math.abs(tvalue) > 1.99) { severity = " <b>um pouco mais</b> que "; resultado += 2;}
+	    else if (Math.abs(tvalue) > 1.66) { severity = " <b>ligeiramente mais</b> que "; resultado += 3;}
 
         var resulttext = "";
         
@@ -146,7 +146,7 @@
             "&e7=" + e7 +
             "&score=" + tvalue +
             "&severity=" + Math.abs(tvalue) +
-            "&resultado" + resultado
+            "&resultado=" + resultado
         );
         
     </script>
