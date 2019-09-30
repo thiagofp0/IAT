@@ -45,6 +45,7 @@
         var tempos = [quantpalavras]; // Vetor que salva o tempo de cada resposta (sem calcular intervalo)
         var tempoInicio; // Váriável que armazena o tempo de início do teste
         var erros = 0; //Erros cometidos nessa seção
+        var tmp4;
         console.log(palavras);
 
         //Parte que muda as palavras da DIV
@@ -54,6 +55,12 @@
                 window.sessionStorage.setItem('page', '8');
                 window.sessionStorage.setItem('tempos4', JSON.stringify(tempos));
                 window.sessionStorage.setItem('erros4', erros);
+
+                 //salvando o tempo em sessão
+
+                tmp4 = (Date.now() - tempoInicio);
+                window.sessionStorage.setItem('tmp4', tmp4);
+
                 window.location.replace("instrucaoRound4.php");
             }
             else{

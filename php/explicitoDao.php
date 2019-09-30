@@ -23,6 +23,8 @@
     if($conexao){
         $sql = "INSERT INTO explicito(sexo, curso, idade, cor, q6, q7, q8, q9, q10a, q10b, q10c, q10d, q10e, q10f, q11a, q11b, q11c, genero) VALUES ($sexo, $curso, $idade, '$cor', '$q6', '$q7', '$q8', '$q9', '$q10a', '$q10b', '$q10c', '$q10d', '$q10e', '$q10f', '$q11a', '$q11b', '$q11c', '$genero');";
         $resultado = mysqli_query($conexao, $sql);
+        $idExplicito = mysqli_insert_id($conexao);
+        echo "<script>window.sessionStorage.setItem('idExplicito', " . $idExplicito . " );</script>";
 
         if($resultado){
             header("location:welcome.php");
@@ -30,5 +32,9 @@
         else{
             echo "erro";
         }
+
+        // usar procedure 
+        $resultado2 = mysqli_query($conexao, $sql2);
+
     }
 ?>

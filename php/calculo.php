@@ -15,8 +15,31 @@
         window.sessionStorage.setItem("page", "999"); 
 
         /*Calculo do resultado*/
-        tempos1 = JSON.parse(window.sessionStorage.getItem('tempos5'));
-        tempos2 = JSON.parse(window.sessionStorage.getItem('tempos7'));
+
+
+        // Pegaando o id do participante
+
+        id = JSON.parse(window.sessionStorage.getItem('idExplicito'));
+
+        // Pegando os tempos por bloco de testes
+        tempo1 = JSON.parse(window.sessionStorage.getItem('tmp1'));
+        tempo2 = JSON.parse(window.sessionStorage.getItem('tmp2'));
+        tempo3 = JSON.parse(window.sessionStorage.getItem('tmp3'));
+        tempo4 = JSON.parse(window.sessionStorage.getItem('tmp4'));
+        tempo5 = JSON.parse(window.sessionStorage.getItem('tmp5'));
+        tempo6 = JSON.parse(window.sessionStorage.getItem('tmp6'));
+        tempo7 = JSON.parse(window.sessionStorage.getItem('tmp7'));
+
+        // Pegando os erros por bloco de teste
+
+        erros1 = JSON.parse(window.sessionStorage.getItem('erros1'));
+        erros2 = JSON.parse(window.sessionStorage.getItem('erros2'));
+        erros3 = JSON.parse(window.sessionStorage.getItem('erros3'));
+        erros4 = JSON.parse(window.sessionStorage.getItem('erros4'));
+        erros5 = JSON.parse(window.sessionStorage.getItem('erros5'));
+        erros6 = JSON.parse(window.sessionStorage.getItem('erros6'));
+        erros7 = JSON.parse(window.sessionStorage.getItem('erros7'));
+
 
         var compatible = 0;
         for (i = 1; i < tempos1.length; i++){
@@ -87,6 +110,56 @@
         }
 
         resulttext += "<br> Número de Erros: " + errosTotal;
+		
+		// AJAX
+		function postAjax(url, data, success) {
+			var params = typeof data == 'string' ? data : Object.keys(data).map(
+					function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
+				).join('&');
+
+			var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			xhr.open('POST', url);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
+			};
+			xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xhr.send(params);
+			return xhr;
+		}
+		
+		/*
+			tempo por bloco
+			número de erro por blocos
+			
+			score
+			severity
+			resultado
+		*/
+		dados = {
+
+            id: id;
+
+            tempo1: tempo1,
+            tempo2: tempo2,
+            tempo3: tempo3,
+            tempo4: tempo4,
+            tempo5: tempo5,
+            tempo6: tempo6,
+            tempo7: tempo7,
+
+            erros1: erros1,
+            erros2: erros2,
+            erros3: erros3,
+            erros4: erros4,
+            erros5: erros5,
+            erros6: erros6,
+            erros7: erros7,
+
+			score: score,
+			severity: severity
+		};
+		postAjax('salvarBD.php', dados, function(data){ console.log(data); });
     </script>
 </head>
 <style>
