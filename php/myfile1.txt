@@ -1,1 +1,0 @@
-{"score":"300","severity":" <b>mais<\/b> que ","resultado":"2.7836631546228325"}
