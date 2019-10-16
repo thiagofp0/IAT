@@ -73,12 +73,12 @@
         
         if (tvalue < 0 && severity != ""){ 
             resulttext = "Você associa feminino com exatas e masculino com humanas " + severity;
-            resulttext += " do que feminino com humanas e masculino com exatas";
+            resulttext += "feminino com humanas e masculino com exatas";
             resultado = 9 - resultado; 
         }
         else if (tvalue > 0 && severity != ""){ 
             resulttext = "Você associa masculino com exatas e feminino com humanas" + severity;
-            resulttext += " do que masculino com humanas e feminino com exatas";
+            resulttext += "masculino com humanas e feminino com exatas";
             resultado += 1;
         }
         else{ 

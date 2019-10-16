@@ -161,10 +161,10 @@
                 </div>
 
                 <div class="textQuestion">
-                    10. As mulheres ocorrem em menor número que os homens como docentes nos cursos de
-    graduação de Ciências Exatas e Naturais em Universidades prestigiadas. Os seguintes
-    fatores são algumas vezes citados como razões para essa diferença. Por favor, avalie o
-    quão importante você considera cada fator na explicação dessa diferença. <br><br>
+                    10. Existem menos mulheres que homens professores(as) em cursos de graduação de Ciências Exatas e Naturais em universidades
+                    prestigiadas. Os fatores que se seguem são muitas vezes citados como razão dessa diferença. <strong>Na sua opinião</strong>, 
+                    o quão importante é cada fator na explicação dessa diferença.
+                    <br><br>
 
                     <div class="textQuestionAns">
                         a) Em média, homens e mulheres diferem na sua disposição em empregar o tempo
@@ -258,8 +258,7 @@ contratações e promoções.
                 </div>
                 
                 <div class="textQuestion">
-                11. Classifique as seguintes afirmativas sobre objetivos pessoais com relação à sua
-importância: <br><br>
+                11. Classifique o quanto é importante, <strong>na sua opinião</strong>: <br><br>
 
                     <div class="textQuestionAns">
                         a) Ser competente em ciência.
